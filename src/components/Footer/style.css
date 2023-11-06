@@ -1,0 +1,25 @@
+/* footer */
+.footer .bi {
+    background-color: #0D28A6;
+    margin-right: 16px;
+    border-radius: 15px;
+    padding: 5px 7px;
+    font-size: 18px;
+    color: white;
+    border: 1px solid #0D28A6;
+}
+
+.footer .col-md-2 a {
+    color: black;
+}
+
+.footer .col-md-2 a:hover {
+    color: #0D28A6;
+}
+
+.footer .bi:hover {
+    background-color: white;
+    border: 1px solid #0D28A6;
+    color: #0D28A6;
+    transition: .5s ease;
+}

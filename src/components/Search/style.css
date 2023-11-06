@@ -1,0 +1,21 @@
+.search-car {
+    padding: 24px;
+    position: sticky;
+    margin: -80px 0 0;
+}
+
+
+
+@media screen and (max-width: 991px) {
+   .search-car{
+        margin: -50px 70px;
+   }
+   
+}
+
+@media screen and (max-width: 551px) {
+    .col-sm {
+        margin: 10px 0 0;
+    }
+    
+ }

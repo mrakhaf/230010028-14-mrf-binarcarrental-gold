@@ -1,0 +1,41 @@
+/* testimonial */
+.carousel-item .card {
+    background-color: #F1F3FF;
+    border: none;
+}
+
+.carousel-item .card .card-body img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bi.bi-chevron-left,
+.bi.bi-chevron-right {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    border: 1px solid black;
+    padding: 3px 10px;
+    border-radius: 35px;
+}
+
+.bi.bi-chevron-left:hover,
+.bi.bi-chevron-right:hover {
+    background-color: #5CB85F;
+    border: 1px solid #5CB85F;
+    color: white;
+}
+
+.bi.bi-star-fill {
+    color: #F9CC00;
+}
+
+.carousel-item img {
+    transition: all .5s;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

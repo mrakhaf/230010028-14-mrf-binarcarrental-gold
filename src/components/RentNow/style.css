@@ -1,0 +1,10 @@
+.banner .container {
+    background-color: #0D28A6;
+    border-radius: 13px;
+    color: white;
+    width: 100%;
+}
+
+.banner .container * {
+    margin: 16px 0;
+}

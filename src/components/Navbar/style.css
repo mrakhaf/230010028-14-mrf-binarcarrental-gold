@@ -1,0 +1,36 @@
+/* navbar */
+nav.navbar {
+    background-color: #F1F3FF;
+    font-size: 14px;
+}
+
+.logo {
+    width: 100px;
+    height: 34px;
+    background: var(--primary-dark-blue-04, #0D28A6);
+}
+
+.offcanvas-body ul li a {
+    color: #646464;
+    margin: 0 10px;
+}
+
+.offcanvas-body ul li a:hover:not(.btn) {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav a:hover:not(.btn)::before {
+        content: "> ";
+    }
+
+    .navbar-nav a:hover:not(.btn)::after {
+        content: " <";
+    }
+
+    .navbar-nav a:hover {
+        border-bottom: none !important;
+    }
+   
+}

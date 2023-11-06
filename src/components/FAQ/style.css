@@ -1,0 +1,8 @@
+.cursor-pointer {
+    cursor: pointer;
+    color: black;
+}
+
+.faq .accordion-header p {
+    margin: 0 !important;
+}
