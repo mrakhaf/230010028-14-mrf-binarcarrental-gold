@@ -4,10 +4,9 @@ import {
 } from "react-router-dom";
 
 import Home from '../pages/Home'
-import Testpage from '../pages/TestPage';
-import App from "../App";
 import TestPage from "../pages/TestPage";
 import SearchCar from "../pages/SearchCar";
+import DetailCar from "../pages/DetailCar";
 
 const router = createBrowserRouter([
     {
@@ -17,14 +16,14 @@ const router = createBrowserRouter([
     {
       path: "/search-car",
       element: <SearchCar/>,
-  },
+    },
     {
       path: "/test",
       element: <TestPage/>,
     },
     {
-        path: "/test-latihan",
-        element: <App/>,
+      path: "/detail/:id",
+      element: <DetailCar/>,
     },
 ]);
 

@@ -6,15 +6,20 @@ import Testimonial from "../../components/Testimonial"
 import RentNow from "../../components/RentNow"
 import FAQ from "../../components/FAQ"
 import Footer from "../../components/Footer"
-import auth from "../../auth/auth.js"
-
-console.log(await auth())
+import { useEffect, useState } from "react"
 
 export default function Home() {
+    // const [buttonBanner, setButtonBannter] = useState(false)
+
+    // useEffect(() => {
+    //     setButtonBannter(true)
+    // })
+    const buttonBanner = true
+
     return (
         <>
             <Navbar/>
-            <Banner/>
+            <Banner button={buttonBanner}/>
             <OurServices/>
             <WhyUs/>
             <Testimonial/>
