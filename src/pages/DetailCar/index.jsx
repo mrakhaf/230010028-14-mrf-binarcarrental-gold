@@ -9,7 +9,7 @@ const DetailCar = () => {
     <>
         <Navbar/>
         <Banner/>
-        <Search isDetail={false} isSubmit={true}/>
+        <Search isDetail={true} isSubmit={true}/>
         <CarDetail/>
         <Footer/>
     </>

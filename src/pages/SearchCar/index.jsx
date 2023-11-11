@@ -84,6 +84,7 @@ export default function SearchCar() {
                 handlePrice={handlePrice}
                 handleSearch={handleSearch}
                 isSubmit={isSubmit}
+                isDetail={false}
             />
             
             <div className="show-car py-5 my-3" id="show-car">
