@@ -1,4 +1,5 @@
 import './style.css'
+import { Link } from 'react-router-dom'
 
 const RentNow = () => {
     return (
@@ -8,7 +9,10 @@ const RentNow = () => {
                 <p className="w-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et
                     dolore magna aliqua. </p>
-                <button className="btn btn-success"><b>Mulai Sewa Mobil</b></button>
+                <Link to={'/search-car'}>
+                    <button className="btn btn-success"><b>Mulai Sewa Mobil</b></button>
+                </Link>
+                
             </div>
         </div>
     )
