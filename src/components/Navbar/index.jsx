@@ -1,10 +1,13 @@
 import './style.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container">
-                <a href="#"><div className="logo"></div></a>
+                <Link to={'/'}>
+                    <div className="logo"></div>
+                </Link>
                 <button className="btn btn-success d-md-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasExample" aria-controls="navbarNav"
                     aria-expanded="false" aria-label="Toggle navigation">

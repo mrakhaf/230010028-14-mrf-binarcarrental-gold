@@ -17,6 +17,7 @@ export default function SearchCar() {
     const [isRented, setIsRented] = useState("")
     const [minPrice, setMinPrice] = useState("")
     const [maxPrice, setMaxPrice] = useState("")
+    const [isSubmit, setIsSubmit] = useState(false)
 
     useEffect(() => {
         getCars(name, category, isRented, minPrice, maxPrice)
@@ -53,7 +54,23 @@ export default function SearchCar() {
     }
 
     const handleSearch = () => {
-        getCars(name, category, isRented, minPrice, maxPrice)
+        if(isSubmit == false) {
+            if (name == "" && category == "" && isRented == "" && minPrice == "" && maxPrice == ""){
+                alert("Cari pilihan mobilmu terlebih dahulu!")
+            } else {
+                setIsSubmit(!isSubmit)
+                getCars(name, category, isRented, minPrice, maxPrice)
+                setName("")
+                setCategory("")
+                setIsRented("")
+                setMaxPrice("")
+                setMinPrice("")
+            }
+        } else {
+            setIsSubmit(!isSubmit)
+            getCars(name, category, isRented, minPrice, maxPrice)
+        }
+        
     }
 
     return (
@@ -66,6 +83,7 @@ export default function SearchCar() {
                 handleIsRented={handleIsRented}
                 handlePrice={handlePrice}
                 handleSearch={handleSearch}
+                isSubmit={isSubmit}
             />
             
             <div className="show-car py-5 my-3" id="show-car">
@@ -74,13 +92,13 @@ export default function SearchCar() {
                     {
                         cars.map((car, key) => (
                             
-                            <div className="col-12 col-sm-6 col-md-3 my-2" key={key}>
+                            <div className="col-12 col-sm-6 col-md-4 my-2" key={key}>
                                 <div className="card p-3">
                                     <img className="card-img-top" src={car.image} alt="Card image cap"/>
                                     <div className="card-body">
                                         <div className="text-card mb-3">
                                             <p className="card-text">{car.name}</p>
-                                            <h5 className="card-title">Rp. {car.price} / Hari</h5>
+                                            <h5 className="card-title">Rp.{new Intl.NumberFormat('en-US').format(car.price)} / Hari</h5>
                                             <h5 className="card-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</h5>
                                         </div>
                                         

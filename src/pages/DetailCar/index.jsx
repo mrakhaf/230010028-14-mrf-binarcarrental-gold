@@ -1,6 +1,18 @@
+import Navbar from "../../components/Navbar"
+import Banner from "../../components/Banner"
+import Footer from "../../components/Footer"
+import CarDetail from "../../components/CarDetail"
+import Search from "../../components/Search"
+
 const DetailCar = () => {
  return(
-    <h1>TEST</h1>
+    <>
+        <Navbar/>
+        <Banner/>
+        <Search isDetail={false} isSubmit={true}/>
+        <CarDetail/>
+        <Footer/>
+    </>
  )
 }
 
