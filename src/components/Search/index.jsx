@@ -1,11 +1,26 @@
 import './style.css'
+import { useState } from 'react';
 export default function Search({handleName, handleCategory, handleIsRented, handlePrice, handleSearch, isSubmit, isDetail}) {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    function handleOverlay() {
+        setIsVisible(true);
+        document.body.classList.add('lock-scroll')
+    }
+
+    function handleCloseOverlay(){
+        setIsVisible(false)
+        document.body.classList.remove('lock-scroll')
+    }
+
 
     return (
         <>
+            {isVisible && <div className="overlay" onClick={handleCloseOverlay}></div>}
             <div className="search-car d-flex justify-content-center">
                 <form action="">
-                    <div className="row shadow bg-white rounded p-3 mb-1 mx-auto">
+                    <div className="row shadow bg-white rounded p-3 mb-1 mx-auto" onClick={handleOverlay}>
                         
                         {
                             isSubmit ? (

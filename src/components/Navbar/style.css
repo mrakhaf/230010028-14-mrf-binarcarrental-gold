@@ -2,6 +2,7 @@
 nav.navbar {
     background-color: #F1F3FF;
     font-size: 14px;
+    z-index: 2;
 }
 
 .logo {
